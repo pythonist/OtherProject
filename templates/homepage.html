@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>Disease Classifier</title>
+ <!-- <link rel = "icon" href = "{{ url_for('static', filename='images/lo.jpg') }}" type = "image/x-icon"> -->
+<style>
+  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("{{ url_for('static', filename='images/pics.jpg') }}");
+  margin: 0;
+   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.header img {
+  float: right;
+  width: 50px;
+  height: 50px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 15px;
+  right: 15px;
+}
+
+.hh{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 60px;
+  color: white;
+}
+.hh1{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 40px;
+  color: white;
+}
+
+.title {
+  color: grey;
+}
+
+
+.b1{
+  font-family: "Sofia",sans-serif;
+}
+.logo2{
+  font-family: "Roboto",sans-serif;
+  font-size: 30px;
+  color: white;
+}
+p.one{
+      text-align:center;
+      text-shadow: 3px 3px 6px red,3px 3px 6px yellow;
+      font-size: 50px;
+    }
+textarea
+{
+  border:6px solid black;
+  width:98%;
+  margin:5px 0;
+  padding:10px;
+}
+.wrapp{
+  text-align: center;
+}
+* {
+  box-sizing:border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 24px;
+}
+
+.xlarge-font {
+  font-size: 40px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: LightBlue;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+</style>
+
+</head>
+<body>
+<h1 class ="hh" style="text-align:center"> Machine Learning Projects</h1>
+<h1 class ="hh1" style="text-align:center"> Project 1</h1>
+  <div class="container" style="background-color:#FAF9F6">
+  <div class="row">
+    <div class="column-66">
+      
+      <h1 class="xlarge-font" style="color: Black"><b>Heart Disease</b></h1>
+      <p class =" large-font"style="color:Black ">This web app is used to predict heart disease liklihood</p>
+      <button class="button" style="background-color:LightSkyBlue"><a href="{{ url_for('heart_page') }}">Predict Heart</a></button>
+    </div>
+    <div class="column-33">
+        <img src="{{ url_for('static', filename='images/heart.jpg') }}" width="500" height="500">
+    </div>
+  </div>
+</div>
+<br>
+<h1 class ="hh1" style="text-align:center;"> Project 2</h1>
+<div class="container" style="background-color:#FAF9F6">
+
+  <div class="row">
+    <div class="column-33">
+      <img src="{{ url_for('static', filename='images/diabetesimg.jpg') }}" alt="App" width="400" height="400">
+    </div>
+    <div class="column-66">
+      
+      <h1 class="xlarge-font" style="color: Black"><b>Diabetes Prediction</b></h1>
+      <p class = "large-font" style="color: Black">It takes various parameters like glucose level,age,body mass index and predcits the person may have diabetes or not.</p>
+      <button class="button" style="background-color:LightSkyBlue"><a href="{{ url_for('diab_page') }}">Predict Diabetes</a></button>
+    </div>
+  </div>
+</div>
+<br>
+
+</body>
+
+</html>
