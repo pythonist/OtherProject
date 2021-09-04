@@ -17,7 +17,7 @@ def home():
     return render_template('homepage.html')
 
 
-@app.route('/heart_page', methods = ['GET','POST'])
+@app.route('/heart_page')
 def heart_page():
     title='Heart Disease'
     return(render_template("heart_disease.html", title=title))
@@ -43,7 +43,7 @@ def predict_hdc():
         return render_template('heart_disease.html', 
                                result = 'You may likely to have heart disease!')
  
-@app.route('/diab_page', methods = ['GET','POST'])
+@app.route('/diab_page')
 def diab_page():
     title='Diabetes Predcition'
     return(render_template("diabetes.html", title=title))
