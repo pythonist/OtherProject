@@ -8,8 +8,8 @@ import pickle
 
 app = Flask(__name__,template_folder='templates')
 
-model1= pickle.load(open('F:/aniketproject/heart_model.pkl', 'rb')) 
-model= pickle.load(open('F:/aniketproject/RFC_diabetes.pkl', 'rb')) 
+model1= pickle.load(open('models/heart_model.pkl', 'rb')) 
+model= pickle.load(open('models/RFC_diabetes.pkl', 'rb')) 
 
     
 @app.route('/')
